@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class DynamicInput {
+    public static void main(String[] args) {
+        // Create Scanner object for reading input
+        Scanner scanner = new Scanner(System.in);
+
+        // Flag to control the loop
+        boolean keepReading = true;
+
+        // Loop to keep reading values dynamically
+        while (keepReading) {
+            // Prompt user for input
+            System.out.println("Enter a value (or type 'exit' to stop): ");
+            String input = scanner.nextLine();
+
+            // Check if user wants to stop
+            if (input.equalsIgnoreCase("exit")) {
+                keepReading = false;  // Set flag to false to stop the loop
+                System.out.println("Exiting the program...");
+            } else {
+                // Process input (Here, just print the value for demonstration)
+                System.out.println("You entered: " + input);
+            }
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+}
+
